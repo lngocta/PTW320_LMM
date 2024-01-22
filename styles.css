@@ -10,15 +10,19 @@ nav {
     background-color: #333;
     height: 100vh;
     color: #fff;
-    padding: 20px;
     box-sizing: border-box;
+    transition: width 0.5s;
 }
 
 nav a {
     display: block;
     color: #fff;
     text-decoration: none;
-    padding: 10px 0;
+    padding: 10px 20px;
+}
+
+nav a:hover {
+    background-color: #555;
 }
 
 main {
@@ -26,3 +30,38 @@ main {
     padding: 20px;
     box-sizing: border-box;
 }
+
+/* Collapsible Navigation Bar Styling */
+@media screen and (max-width: 768px) {
+    nav {
+        width: 0;
+    }
+
+    nav a {
+        text-align: center;
+    }
+
+    body.collapsed nav {
+        width: 60px;
+    }
+
+    body.collapsed main {
+        margin-left: 60px;
+    }
+}
+
+.toggle-btn {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .toggle-btn {
+        display: block;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        cursor: pointer;
+        z-index: 2;
+    }
+}
+
