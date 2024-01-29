@@ -3,12 +3,14 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    font-size: 24px; 
+    font-size: 20px; 
+    background-color:#dfc5b7
+     ;
 }
 
 nav {
     width: 200px;
-    background-color: #333;
+    background-color: #98411C;
     height: 100vh;
     color: #fff;
     box-sizing: border-box;
@@ -66,3 +68,10 @@ main {
     }
 }
 
+.fixed-image {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    width: 50%;
+    z-index: 999;
+}
