@@ -15,6 +15,7 @@ nav {
     color: #fff;
     box-sizing: border-box;
     transition: width 0.5s;
+    font-weight: bold;
 }
 
 nav a {
