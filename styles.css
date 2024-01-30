@@ -9,9 +9,9 @@ body {
 }
 
 nav {
-    width: 200px;
+    width: 20%;
     background-color: #98411C;
-    height: 100vh;
+    height: 125vh;
     color: #fff;
     box-sizing: border-box;
     transition: width 0.5s;
@@ -21,57 +21,29 @@ nav a {
     display: block;
     color: #fff;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 20px 30px;
 }
 
 nav a:hover {
-    background-color: #555;
+    background-color: #dfc5b7;
+    color: #98411C;
 }
 
 main {
+    width: 20%;
     flex: 1;
     padding: 20px;
     box-sizing: border-box;
 }
 
-/* Collapsible Navigation Bar Styling */
-@media screen and (max-width: 768px) {
-    nav {
-        width: 0;
-    }
-
-    nav a {
-        text-align: center;
-    }
-
-    body.collapsed nav {
-        width: 60px;
-    }
-
-    body.collapsed main {
-        margin-left: 60px;
-    }
+.cropped-container {
+    width: 1000px; /* Set the desired width of the cropped area */
+    height: 450px; /* Set the desired height of the cropped area */
+    overflow: hidden;
 }
 
-.toggle-btn {
-    display: none;
-}
-
-@media screen and (max-width: 768px) {
-    .toggle-btn {
-        display: block;
-        position: fixed;
-        top: 10px;
-        left: 10px;
-        cursor: pointer;
-        z-index: 2;
-    }
-}
-
-.fixed-image {
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    width: 50%;
-    z-index: 999;
+.cropped-image {
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Maintain the image's aspect ratio */
+    display: block;
 }
